@@ -13,7 +13,7 @@ try:
 		print("Oops, an error occurred: ", verr)
 
 except IOError as err:
-	print("Oops, an error occurred: ", err)
+	print("Oops, the data file is missing: ", err)
 
 finally:
 	data.close()
