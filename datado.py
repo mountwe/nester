@@ -1,0 +1,18 @@
+try:
+	data = open('sketch.txt')
+
+	try:
+		for each_line in data:
+			(role, line_spoken) = each_line.split(':')
+			print(role, end='')
+			print(' said: ', end='')
+			print(line_spoken, end='')
+
+	except ValueError as verr:
+		print("Oops, an error occurred: ", verr)
+
+except IOError as err:
+	print("Oops, an error occurred: ", err)
+
+finally:
+	data.close()
